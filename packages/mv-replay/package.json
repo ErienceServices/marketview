@@ -1,0 +1,28 @@
+{
+  "name": "@marketview/mv-replay",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@marketview/mv-core": "workspace:*"
+  },
+  "devDependencies": {
+    "eslint": "^9.8.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.10"
+  }
+}
